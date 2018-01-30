@@ -20,6 +20,7 @@ import org.opentripplanner.updater.bike_park.BikeParkUpdater;
 import org.opentripplanner.updater.bike_rental.BikeRentalUpdater;
 import org.opentripplanner.updater.example.ExampleGraphUpdater;
 import org.opentripplanner.updater.example.ExamplePollingGraphUpdater;
+import org.opentripplanner.updater.mamba.MambaTrafficUpdater;
 import org.opentripplanner.updater.stoptime.PollingStoptimeUpdater;
 import org.opentripplanner.updater.stoptime.WebsocketGtfsRealtimeUpdater;
 import org.opentripplanner.updater.street_notes.WinkkiPollingGraphUpdater;
@@ -110,6 +111,9 @@ public abstract class GraphUpdaterConfigurator {
                 }
                 else if (type.equals("opentraffic-updater")) {
                     updater = new OpenTrafficUpdater();
+                }
+                else if (type.equals("mamba-updater")) {
+                    updater = new MambaTrafficUpdater();
                 }
             }
 
